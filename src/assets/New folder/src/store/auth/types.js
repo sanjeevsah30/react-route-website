@@ -1,8 +1,0 @@
-export const STOREUSER = "STOREUSER";
-export const ISAUTHENTICATED = "ISAUTHENTICATED";
-export const ISCHECKING = "ISCHECKING";
-export const LOGOUTUSER = "LOGOUT";
-export const SETFORMERROR = "SETFORMERROR";
-export const IS_SIGNUP = "IS_SIGNUP";
-export const IS_SIGNUP_CONFLICT = "IS_SIGNUP_CONFLICT";
-export const IS_FIRST_TIME_USER = "IS_FIRST_TIME_USER";
