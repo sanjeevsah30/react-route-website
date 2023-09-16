@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "@store/*": ["./store/*"],
+            "@utils/*": ["./utils/*"],
+            "@components/*": ["./components/*"],
+            "@constants/*": ["./constants/*"],
+            "@assets/*": ["./assets/*"],
+            "@config/*": ["./config/*"],
+            "@styles/*": ["./styles/*"],
+            "@hooks/*": ["./hooks/*"],
+            "@pages/*": ["./pages/*"],
+            "@type/*": ["./type/*"],
+            "@redux/*": ["./redux/*"],
+            "@convin/*": ["./convin/*"]
+          }
+    }
+}

@@ -1,0 +1,45 @@
+.snippet_container {
+    width: 20.8125rem;
+    border-radius: 0.75rem;
+    line-height: normal;
+
+    .ant-card-body {
+        padding: 0 !important;
+        box-shadow: 0px 4px 20px rgba(51, 51, 51, 0.1);
+        border: 1px solid rgba(153, 153, 153, 0.2);
+        border-radius: 12px;
+        &:hover {
+            border: 1px solid rgba(26, 98, 242, 0.3);
+        }
+    }
+
+    .snippet_header {
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+    }
+
+    .snippet_content {
+        padding: 1.5rem 2rem;
+        margin: 0;
+        height: 5.3125rem;
+        // max-height: 5.3125rem;
+        // white-space: wrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+    }
+
+    .snippet_footer {
+        background: rgba(26, 98, 242, 0.1);
+        padding: 1.3125rem 2rem;
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+
+        .view_call_btn.ant-btn {
+            background: rgba(26, 98, 242, 0.1);
+            border: 1px solid #1a62f2;
+            border-radius: 6px;
+            color: #1a62f2;
+            // padding: 0.5rem;
+        }
+    }
+}

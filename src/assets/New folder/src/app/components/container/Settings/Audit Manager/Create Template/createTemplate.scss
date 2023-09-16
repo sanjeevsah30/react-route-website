@@ -1,0 +1,10 @@
+.create__template{
+    &__teams{
+        border-left: 1px solid rgba(0,0,0,0.1);
+    };
+    &__name__input{
+        width: 90%;
+        background: #F7F9FC;
+        height: 46px;
+    }
+}

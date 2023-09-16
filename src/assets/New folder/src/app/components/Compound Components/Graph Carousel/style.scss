@@ -1,0 +1,127 @@
+@import '../../../static/styles/dependency/variables';
+@import '../../../static/styles/dependency/mixins';
+.ant-carousel {
+    height: 100%;
+    .slick-slider {
+        height: 100%;
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+                .slick-slide {
+                    height: 100%;
+                }
+                .slick-slide > div:first-child {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.ant-carousel {
+    .slick-next {
+        &::before {
+            content: '';
+        }
+        z-index: 100;
+        right: 0;
+    }
+    .slick-prev {
+        &::before {
+            content: '';
+        }
+        z-index: 100;
+        left: 0;
+    }
+}
+
+.custom--graph {
+    height: 100%;
+
+    .ant-popover-inner {
+        border-radius: 6px;
+        box-shadow: 0px 4px 20px 0px #33333324;
+    }
+
+    .ant-popover-inner-content {
+        padding: 10px;
+        font-size: 14px;
+        background: #ffffff;
+    }
+
+    .ant-popover-title {
+        padding: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        background: #ffffff;
+    }
+
+    .graphTick {
+        color: rgba(153, 153, 153, 0.2);
+    }
+
+    .today {
+        border-bottom: 5px solid #1a62f2;
+        background: #16a2f233;
+    }
+    .graphTable {
+        table-layout: fixed;
+        width: 100%;
+
+        .line_tr {
+            border-top: 1px solid $solitude;
+            height: 35px;
+        }
+    }
+    .call_block {
+        height: auto;
+        box-shadow: 0px 4px 25px 0px #ffa82f3b;
+
+        width: 80%;
+
+        border-radius: 100px;
+        margin: 0 auto;
+
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.graph__types {
+    line-height: 12px;
+    color: #999999;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.call_info_container {
+    width: 258px;
+    max-height: 110px;
+    height: auto;
+    overflow-y: scroll;
+    @include scrollbar__style;
+    .chevron {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: rgba(153, 153, 153, 0.2);
+        color: $mine_shaft;
+    }
+
+    .call_info {
+        cursor: pointer;
+        padding: 9px;
+        transition: all 0.3s linear;
+        &:hover {
+            .chevron {
+                background: #ffa82f1a;
+                color: $sunshade;
+            }
+            background: #ffa82f1a;
+        }
+    }
+}

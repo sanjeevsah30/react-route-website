@@ -1,0 +1,279 @@
+.recordingmanager {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .dropdown .select {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.recording-container {
+  max-width: 30rem;
+  min-width: 25rem;
+  margin-left: 0;
+
+  .ant-spin-nested-loading {
+    width: 100%;
+  }
+
+  &.settings {
+    order: -1;
+  }
+
+  &-topsection {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 0.1rem solid $belowLevel;
+
+    &-heading {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  &-bottomsection {
+    width: 100%;
+
+    &-selector,
+    &-voiceprint {
+      display: flex;
+      width: 100%;
+      padding: 1rem 0;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 0.1rem solid $belowLevel;
+
+      .record {
+        margin-top: 0.5rem;
+      }
+
+      .label {
+        letter-spacing: normal;
+        font-weight: 600;
+      }
+
+      .dropdown {
+        padding: 1rem 0;
+        width: 45%;
+      }
+
+      .cta {
+        width: 50%;
+        height: auto;
+        padding: 0.5rem 0.75rem;
+        margin-top: 1rem;
+
+        span {
+          font-size: 1rem;
+        }
+
+        i.fa {
+          font-size: 2rem;
+        }
+      }
+
+      .selectormessage {
+        text-transform: capitalize;
+      }
+
+      &.settings {
+        padding: 1rem;
+        align-items: flex-start;
+
+        h4 {
+          text-transform: uppercase;
+          letter-spacing: normal;
+          font-size: 0.75rem;
+          font-weight: 600;
+        }
+
+        &:last-of-type {
+          border: 0;
+        }
+
+        .ant-checkbox-wrapper {
+          margin: 0 0 0.25rem;
+        }
+
+        i {
+          font-size: 0.75rem;
+          color: $echoblue;
+          font-weight: 500;
+        }
+
+        .assistant-name {
+          width: 100%;
+          margin: 0.5rem 0;
+
+          .label {
+            font-size: 0.75rem;
+            padding-left: 0;
+          }
+
+          input.ant-input {
+            // text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    &-voiceprint {
+      border: none;
+      width: 100%;
+
+      .voiceprinttext {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .recordoptions {
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        .deleterecording {
+          visibility: hidden;
+        }
+
+        .deleterecording,
+        .recordingicon,
+        .recordaudio,
+        .saveRecording {
+          flex: 1;
+          font-size: 1rem;
+          text-align: center;
+          font-size: 0.75rem;
+
+          .danger,
+          .startrecording,
+          .save {
+            font-size: 0.75rem;
+            color: $danger;
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+          }
+
+          .save {
+            color: $primary;
+          }
+
+          .startrecording {
+            color: $labelgrey;
+          }
+        }
+
+        .recordingicon {
+          border-radius: 50%;
+          border: 0.1rem solid $primary;
+          max-width: 5rem;
+          height: 5rem;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          background: $primary;
+          cursor: pointer;
+          box-shadow: 0 0.625rem 1.25rem 0 rgba(77, 88, 112, 0.12);
+
+          i.fa {
+            font-size: 2rem;
+            color: $white;
+          }
+
+          .hiddenmic {
+            width: 0;
+            height: 0;
+          }
+
+          &.animated {
+            background: $white;
+            animation: pulse 1.5s linear infinite;
+
+            i.fa {
+              color: $primary;
+            }
+          }
+
+          .label {
+            color: $white;
+            padding-top: 0.5rem;
+            font-size: 0.875rem;
+
+            &.recording {
+              color: $danger;
+            }
+          }
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0.3125rem 0 rgba(84, 137, 242, 0.2);
+          }
+
+          65% {
+            box-shadow: 0 0 0.3125rem 0.8125rem rgba(84, 137, 242, 0.2);
+          }
+
+          90% {
+            box-shadow: 0 0 0.3125rem 0.8125rem rgba(84, 137, 242, 0.2);
+          }
+        }
+      }
+
+      &.recordingsection {
+        align-items: flex-start;
+        padding: 0.75rem;
+        padding-top: 1.25rem;
+        box-sizing: border-box;
+
+        .label {
+          font-size: 0.875rem;
+          padding: 0 0.75rem;
+        }
+
+        .passage {
+          font-size: 0.8rem;
+          margin-top: 0.75rem;
+          border-radius: 0.5rem;
+          padding: 1.25rem;
+          line-height: 1.61;
+          background: $surface;
+        }
+      }
+    }
+
+    .blockederror {
+      padding: 0.75rem;
+      text-align: center;
+
+      .error-span {
+        width: auto;
+      }
+    }
+  }
+}
+
+.recording-assistant-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 1rem;
+  align-items: center;
+
+  .ant-btn.ant-btn-link {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    color: $echoblue;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    span {
+      padding-right: 0.25rem;
+    }
+  }
+}

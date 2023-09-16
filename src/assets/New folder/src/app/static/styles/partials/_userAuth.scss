@@ -1,0 +1,185 @@
+.user-auth {
+    &-form {
+        width: 100%;
+
+        &-userinput {
+            &:not(:first-of-type) {
+                padding-top: 1.3125rem;
+            }
+        }
+
+        &-cta {
+            &-wrapper {
+                margin-top: 3.875rem;
+            }
+
+            &-btn.cta.withicon {
+                max-width: 100%;
+            }
+        }
+
+        &-input .input {
+            font-size: 1.1875rem;
+        }
+    }
+
+    &-bottom-nav {
+        p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 1.75rem;
+            line-height: 1.25;
+            letter-spacing: 0.05rem;
+            font-weight: 500;
+        }
+
+        a {
+            padding-left: 0.25rem;
+            display: inline-block;
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+.user-auth-card {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .ant-card {
+        width: 30rem;
+        padding: 0.5rem;
+        @include hover;
+        &-body {
+            padding-bottom: 0rem;
+        }
+    }
+
+    .ant-card-head-title {
+        padding: 0.25rem;
+    }
+
+    .title-row {
+        align-items: center;
+    }
+
+    &-logos {
+        font-weight: 600;
+        text-align: right;
+        letter-spacing: normal;
+
+        img {
+            max-width: 8rem;
+        }
+        .orgName {
+            border-left: 1px solid $echoblue;
+            padding-left: 0.25rem;
+        }
+    }
+
+    label {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .ant-input-affix-wrapper {
+        padding: 0.5rem 0.75rem;
+        border-radius: 5rem;
+    }
+
+    .submitButton {
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ant-form-item-explain {
+        padding-left: 1rem;
+        padding-top: 0.25rem;
+        font-size: 12px;
+    }
+    .domain__input .ant-input-group-addon {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        &:first-child {
+            border-radius: 5rem 0 0 5rem;
+        }
+        &:last-child {
+            border-radius: 0 5rem 5rem 0;
+        }
+    }
+    .ant-input {
+        padding: 0.5rem 0.75rem;
+        font-weight: 600;
+    }
+    .user_auth_orgName {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 15px;
+        line-height: 24px;
+        padding: 0 12px;
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 12px;
+        // margin-bottom: 12px;
+        color: #bfbfbf;
+        .anticon {
+            margin-right: 4px;
+        }
+        &.actual {
+            color: rgba(0, 0, 0, 0.65);
+            letter-spacing: 0;
+            font-weight: 500;
+        }
+    }
+    .user_auth_google {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include hover;
+        border: none;
+        svg {
+            fill: #ea4335;
+            font-size: 20px;
+        }
+    }
+    .ant-form-item {
+        margin-bottom: 12px;
+    }
+    .ant-input-affix-wrapper-focused .ant-input {
+        box-shadow: none !important;
+    }
+}
+
+
+.password_reset_card{
+    width: 620px;
+    .user-auth-card-logos{
+        padding: 12px 0px;
+    }
+    .ant-card {
+        padding: 0;
+        box-shadow: none;
+        width: 100%;
+    }
+    .ant-card-body{
+        padding: 51px 53px 0px;
+    }
+
+
+    .ant-form-item-required{
+        font-weight: 600;
+        color: #666666;
+        text-transform: unset;
+        font-size: 20px;
+        &::before{
+            content: "" !important;
+        }
+    }
+
+    button{
+        font-size: 16px;
+    }
+}

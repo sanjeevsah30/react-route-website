@@ -1,0 +1,52 @@
+.step_modal {
+    .ant-modal-header {
+        border-radius: 6px 6px 0 0;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .ant-modal-title {
+        font-size: 24px;
+    }
+    .ant-modal-close-x {
+        .anticon {
+            transform: scale(1.75);
+            color: #333;
+            padding-top: 1.25rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .ant-modal-body {
+        height: 626px;
+        padding-top: 0.25rem;
+        overflow: hidden;
+    }
+    .ant-modal-footer {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2.25rem;
+        border-top: 1px solid #99999933;
+
+        button {
+            padding: 11px 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            &.ant-btn-default {
+                color: #1a62f2;
+                border: 1px solid #1a62f2;
+            }
+        }
+    }
+    &--body {
+        display: flex;
+    }
+    &--steps {
+        flex: 1;
+    }
+    &--content {
+        flex: 4;
+    }
+}

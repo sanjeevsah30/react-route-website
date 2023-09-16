@@ -1,0 +1,131 @@
+@include md-down {
+    .individual__call {
+        .appHome-right {
+            position: fixed;
+            width: 100%;
+            background: $white;
+        }
+    }
+
+    .individualcall {
+        padding: 0;
+        height: 100%;
+
+        &-details {
+            flex-flow: column-reverse;
+        }
+
+        .detailssec,
+        .heatmap-tag,
+        .addToLib,
+        .transcript-action-card {
+            display: none;
+        }
+
+        .individualcall-details-left {
+            overflow-y: scroll;
+        }
+
+        .individualcall-transcript-top-name .label {
+            font-size: 12px;
+            max-width: 6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .ant-btn-icon-only,
+        .clock {
+            font-size: 10px;
+        }
+
+        .topics {
+            padding-left: 4px;
+        }
+
+        .ant-tag-has-color {
+            font-size: 10px;
+            margin: 0;
+        }
+
+        .individualcall-transcript-container {
+            padding: 4px 4px 0;
+            height: 100% !important;
+            overflow-y: scroll;
+        }
+
+        .individualcall-tabbar-tabs {
+            position: absolute;
+            @include hover;
+            z-index: 102;
+            background-color: $white;
+            flex-flow: column;
+            transition: 0.3s max-height ease;
+            border-radius: 4px;
+            max-height: 0;
+            overflow: hidden;
+
+            &.activate {
+                max-height: 100vh;
+                overflow: auto;
+                transition: 1s max-height ease;
+            }
+        }
+
+        .individualcall-tabbar-tabs-tab {
+            padding: 0.75rem 2rem;
+        }
+
+        .closeBtn {
+            justify-content: flex-end;
+
+            .ant-btn {
+                border: 0;
+            }
+        }
+
+        .activeTabTitle {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            padding: 1rem;
+            font-weight: 500;
+        }
+
+        .individualcall-details-right {
+            border: 0;
+
+            .individualcall-details-right-calldetails-top {
+                padding: 0px;
+            }
+        }
+
+        .feedback {
+            &-wrapper {
+                padding: 0 0.5rem 0.5rem;
+            }
+
+            &-card {
+                padding: 0.5rem;
+            }
+
+            &-ratings-boolean,
+            &-ratings-scale {
+                padding-left: 1rem;
+            }
+
+            &-audit {
+                padding-left: 0;
+            }
+
+            &-ratings .feebackBtn {
+                max-width: 3rem;
+                padding: 0.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 0.5rem 0.5rem 0;
+            }
+        }
+    }
+}

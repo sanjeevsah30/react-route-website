@@ -1,0 +1,217 @@
+.teammanager{
+    &-container{
+        margin: 2rem;
+        max-width: 70rem;
+        padding: 0;
+        &-top,
+        &-bottom{
+            padding: 1rem 2rem;
+            width: 100%;
+        }
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .name{
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            .cta{
+                height: auto;
+                padding: 1rem;
+                span{
+                    font-size: 0.875rem;
+                }
+            }
+        }
+        &-bottom{
+            padding: 1rem 0;
+        }
+    }
+    &-table{
+        &-top,
+        &-row{
+            display: flex;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding:0 2rem;
+            >div{
+                flex: 1 1;
+                display: flex;
+                align-items: center;
+            }
+        }
+        &-top{
+            margin-top: 2rem;
+        }
+        &-row{
+            font-size: 0.875rem;
+            text-transform: capitalize;
+            padding: 0.5rem 2rem;
+            margin: 0.5rem 0;
+            &:nth-child(odd){
+                background: $surface;
+                padding: 0.8rem 2rem;
+            }
+            .cta{
+                height: auto;
+                span{
+                    font-size: 0.875rem;
+                    text-align: left;
+                    font-weight: 500;
+                }
+                &.delete{
+                    color: $danger;
+                }
+            }
+        }
+        &-contents-actions{
+            justify-content: flex-start;
+        }
+    }
+}
+.teamsidepane{
+    @extend .topicsidepane;
+    font-weight: 400;
+    // width: 640px;
+    // &-container{
+    //     position: fixed;
+    //     left:0;
+    //     right: 0;
+    //     bottom: 0;
+    //     top: 0;
+    //     background: rgba(77, 88, 112, 0.3);
+    //     z-index: 14;
+    // }
+    &-top{
+        padding: 0rem 1rem;
+        flex: 0.75;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.1rem solid $belowLevel;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        min-height: 4rem;
+        &-heading{
+            flex: 3;
+        }
+        &-right{
+            text-align: right;
+            flex: 1;
+            .closeicon{
+                cursor: pointer;
+            }
+        }
+    }
+    &-mainsettings{
+        flex:0.85;
+        padding: 1rem 1rem 0.25rem;
+        display: flex;
+        .inputsection{
+            flex: 1;
+            .select{
+                background: $white;
+                width: 100%;
+            }
+            &:nth-child(even){
+                padding-left: 0.5rem;
+            }
+            .label{
+              width: auto;
+              display: inline;
+            }
+            .teammanager{
+                color: $primary;
+                font-size: 0.875rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                &.nomanager{
+                    color: $danger;
+                }
+            }
+        }
+    }
+    &-teammembers{
+        flex: 8;
+        border-bottom: 0.1rem solid $belowLevel;
+        @include overflow-auto;
+        min-height: 60%;
+        .repstable{
+            position: relative;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            &-row,&-heading{
+                display: flex;
+                flex: 1;
+                width: 100%;
+                margin: 0;
+                &-field{
+                    flex: 1;
+                    padding: 0.75rem;
+                    min-width: 10%;
+                    font-size: 0.75rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &.role, &.fullname{
+                        flex: 1.35;
+                        .dropdown{
+                            width: 100%;
+                            padding: 0.25rem;
+                            .select{
+                                width: 100%;
+                                padding: 0.6rem 0.35rem;
+                                border-radius: 0.5rem;
+                                font-size: 0.75rem;
+                                margin: 0;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                background: $bordergrey;
+                                border: none;
+                            }
+                        }
+                    }
+                    &.email{
+                        flex: 2;
+                    }
+                    &.action{
+                        flex: 0.75;
+                    }
+                    .label{
+                        margin: 0;
+                        padding: 0;
+                        width: auto;
+                        &.removerlabel{
+                            color: $danger;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &:nth-child(even){
+                    background: $belowLevel;
+                }
+            }
+        }
+    }
+    &-bottom{
+        padding: 0.75rem;
+        flex: 0.25;
+        display: flex;
+        justify-content: flex-end;
+        .success-span, .error-span{
+            font-size: 0.875rem;
+            padding: 0;
+            width: auto;
+        }
+        .greenicon{
+            color: $success;
+        }
+    }
+}

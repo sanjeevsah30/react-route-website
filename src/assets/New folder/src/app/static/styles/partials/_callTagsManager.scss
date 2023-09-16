@@ -1,0 +1,33 @@
+.callTags-container {
+    display: flex;
+    flex-flow: column;
+    margin-top: 1rem;
+    max-width: 60rem;
+
+    &-actions {
+        max-width: 20rem;
+    }
+
+    &-tags {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        .ant-tag {
+            padding: 0.35rem;
+            margin: 0.25rem;
+            text-transform: uppercase;
+            border-radius: 1rem;
+            font-weight: 500;
+        }
+
+        .anticon-close {
+            font-size: 14px;
+            font-weight: 500;
+            vertical-align: text-bottom;
+            color: $danger;
+        }
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        border: none;
+    }
+}

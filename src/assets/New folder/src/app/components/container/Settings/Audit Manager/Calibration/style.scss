@@ -1,0 +1,27 @@
+.audit_calibration {
+    padding:10px;
+    padding-bottom: 20px;
+    .audit_calibration_header {
+        display: flex;
+    }
+    .grid {
+        display: flex;
+        .grid_left {
+            .grid_left_top {
+                padding: 10px 0;
+            }
+            width:30%;
+            padding: 0 20px;
+            .other_details {
+                padding-top:15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+        .grid_right {
+            width:70%;
+        }
+    }
+}

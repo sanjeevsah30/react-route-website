@@ -1,0 +1,265 @@
+@import '../dependency/variables';
+
+.preview {
+    height: 100%;
+    background-color: $belowLevel;
+
+    .preview_header {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include md-down {
+            padding: 0 0.5rem;
+        }
+
+        img {
+            max-width: 10rem;
+        }
+    }
+
+    .preview_content {
+        padding-top: 5rem;
+        font-size: 0.75rem;
+
+        label {
+            color: $labelgrey;
+            padding: 0;
+            font-size: 0.75rem;
+        }
+    }
+    .preview_errorContent {
+        // padding-top: 5rem;
+        max-width: 1300px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include md-down {
+            max-width: 100%;
+            padding-left: 12px;
+        }
+    }
+
+    .preview_callinfo {
+        background: $offwhite;
+        padding: 1rem 0.5rem;
+
+        @include md-down {
+            display: none;
+        }
+
+        border: {
+            left: 1px solid $belowLevel;
+            right: 1px solid $belowLevel;
+        }
+
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        margin: 0 !important;
+    }
+
+    .preview_right {
+        padding-right: 1rem;
+
+        @include md-down {
+            padding: 0;
+            order: 1;
+        }
+
+        &_comment {
+            background-color: $offwhite;
+
+            border: {
+                left: 1px solid $belowLevel;
+                right: 1px solid $belowLevel;
+                bottom: 1px solid $belowLevel;
+            }
+
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+
+            @include md-down {
+                display: none;
+            }
+
+            label {
+                padding-left: 0.5rem;
+            }
+
+            &_text {
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                font-size: 0.8125rem;
+            }
+        }
+
+        &_transcript {
+            background: $offwhite;
+            padding: 0.5rem;
+            border: 1px solid $belowLevel;
+            border-radius: 0.5rem;
+            flex-flow: column;
+
+            &_header {
+                padding: 0.5rem;
+                border-bottom: 1px solid $belowLevel;
+            }
+
+            &_monologues {
+                padding: 0.5rem;
+                max-height: 24rem;
+                @include overflow-auto;
+                cursor: pointer;
+            }
+
+            &_top {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+
+                label {
+                    color: $textgrey;
+                }
+
+                i {
+                    margin-right: 0.25rem;
+                }
+
+                &_username {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+
+                &_topics {
+                    margin-left: 0.5rem;
+                }
+            }
+
+            &_monologue {
+                border: 1px solid $belowLevel;
+                margin-top: 0.5rem;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                font-size: 0.8125rem;
+
+                &_active {
+                    @include hover;
+                }
+            }
+        }
+    }
+
+    .preview_row {
+        max-width: 72rem;
+        width: 90%;
+        margin: 1rem auto;
+        @include hover;
+
+        @include md-down {
+            margin: 0;
+            width: 100%;
+
+            .ant-card-body {
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    .preview_footer {
+        text-align: center;
+    }
+
+    .share-heatmap {
+        align-items: center;
+        // margin: 0 0 1rem;
+        padding: 12px 1rem 0;
+
+        &-top-left,
+        &-top-right {
+            display: flex;
+
+            .namelabel {
+                color: $black;
+            }
+        }
+    }
+
+    .preview_row_heatmap {
+        @include md-down {
+            display: none;
+        }
+    }
+    .preview_errorContent--btn,
+    .preview_errorContent--btnHollow {
+        padding: 16px !important;
+        height: 52px;
+        font-size: 16px;
+        border-radius: 8px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin: 0 !important;
+        @include md-down {
+            font-size: 14px;
+            padding: 12px !important;
+        }
+    }
+    .preview_errorContent--btnHollow {
+        color: $primary;
+        border-width: 1.5px;
+        border-color: $primary;
+        margin-left: 24px !important;
+        @include md-down {
+            margin-left: 12px !important;
+        }
+    }
+    .preview_errorContent--img {
+        @include md-down {
+            display: none;
+        }
+    }
+    &__tabs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $solitude;
+        &--items {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 8px 0 0;
+            flex: 1;
+            li {
+                padding: 4px 12px 8px;
+                color: $dove_gray;
+                cursor: pointer;
+                &.active {
+                    color: $primary;
+                    font-weight: 600;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        height: 4px;
+                        background-color: $primary;
+                        border-radius: 4px 4px 0 0;
+                    }
+                }
+            }
+        }
+        .ant-input-affix-wrapper {
+            max-width: 400px;
+        }
+    }
+}

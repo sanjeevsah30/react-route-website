@@ -1,0 +1,148 @@
+[{
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 69.84,
+    "end_time": 73.52,
+    "monologue_text": "actually, sure that just, you know, stuck in one of the other.",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 74.48,
+    "end_time": 75.2,
+    "monologue_text": "let me",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 76.988,
+    "end_time": 79.263,
+    "monologue_text": "sorry, you just, you know,",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 79.8,
+    "end_time": 81.08,
+    "monologue_text": "and we",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 107.12,
+    "end_time": 113.891,
+    "monologue_text": "ashish, i just had one query. that is just now. i, okay, because we have joined.",
+    "topics": {},
+    "sentence_categories": {
+        "action": " ashish, i just had one query. that is just now. i, okay, because we have joined."
+    },
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 149.52,
+    "end_time": 154.218,
+    "monologue_text": "yeah, hi, richard. and hi, ashish.",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "owner",
+    "speaker_type": "owner",
+    "start_time": 154.8,
+    "end_time": 156.571,
+    "monologue_text": "that gets started here.",
+    "topics": {},
+    "sentence_categories": {
+        "action": " that gets started here."
+    },
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 159.672,
+    "end_time": 162.038,
+    "monologue_text": "from ashish and",
+    "topics": {},
+    "sentence_categories": {
+        "action": " from ashish and"
+    },
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 164.185,
+    "end_time": 165.076,
+    "monologue_text": "mobile,",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 166.129,
+    "end_time": 166.991,
+    "monologue_text": "definitely.",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 167.52,
+    "end_time": 175.803,
+    "monologue_text": "thats, yeah, i know the other co. honda. second then, and i will take care of the entire everything in engineering.",
+    "topics": {},
+    "sentence_categories": {
+        "action": " thats, yeah, i know the other co. honda. second then, and i will take care of the entire everything in engineering."
+    },
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 176.4,
+    "end_time": 187.656,
+    "monologue_text": "i tried to look at the product and give them everything. so i think i will reach out to us. and it was great to understand the requirements that we had",
+    "topics": {},
+    "sentence_categories": {
+        "action": " i tried to look at the product and give them everything. so i think i will reach out to us. and it was great to understand the requirements that we had"
+    },
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 188.28,
+    "end_time": 190.716,
+    "monologue_text": "hope to set up, discuss more about the same.",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 191.586,
+    "end_time": 192.992,
+    "monologue_text": "yeah,",
+    "topics": {},
+    "sentence_categories": {},
+    "highlighted": false
+}, {
+    "speaker_name": "client",
+    "speaker_type": "client",
+    "start_time": 2762.88,
+    "end_time": 2773.752,
+    "monologue_text": "you mean, the data is charged, right? yeah, how the data stored and how the interpreted and all that.",
+    "topics": {},
+    "sentence_categories": {
+        "question": " you mean, the data is charged, right?"
+    },
+    "highlighted": false
+}]

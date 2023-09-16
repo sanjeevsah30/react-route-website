@@ -1,0 +1,55 @@
+.dropdown-datalist {
+    position: relative;
+    .datalist {
+        position: absolute;
+        top: 3.5rem;
+        display: none;
+        background: $white;
+        border-radius: 0.5rem;
+        width: 70%;
+        box-shadow: 0 0.625rem 1.25rem 0 rgba(77, 88, 112, 0.12);
+        max-height: 18rem;
+        @include overflow-auto;
+        z-index: 1;
+        &.active {
+            display: block;
+        }
+        &-option {
+            padding: 0.5rem;
+            cursor: pointer;
+            &:nth-child(even) {
+                background: $solitude;
+            }
+            &:hover {
+                background: $surface;
+            }
+            button {
+                text-align: left;
+            }
+            p {
+                margin: 0;
+            }
+            &-text {
+                text-transform: uppercase;
+                font-size: 0.875rem;
+                color: $textgrey;
+                font-weight: 500;
+            }
+            &-value {
+                font-size: 0.75rem;
+                // color: $echoblue;
+            }
+            .newtag {
+                display: flex;
+                align-items: center;
+                &-svg{
+                    display: flex;
+                    padding-right: 0.5rem;
+                    svg {
+                        width: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

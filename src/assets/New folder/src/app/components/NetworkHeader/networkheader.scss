@@ -1,0 +1,28 @@
+@import '../../static/styles/dependency/variables';
+
+.offline_online_header {
+    transition: all 0.8s ease;
+    height: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.offline,
+.online {
+    padding: 4px 0;
+    height: 28px;
+    background-color: $danger;
+}
+
+.online {
+    background-color: $success;
+}
+
+.try_again {
+    text-decoration: underline;
+}
+
+.try_again:hover {
+    cursor: pointer;
+}

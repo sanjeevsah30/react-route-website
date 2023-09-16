@@ -1,0 +1,84 @@
+@import '../../../static/styles/dependency/variables';
+
+.date__container {
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid $solitude;
+    background: $white;
+    margin: 18px 0px;
+    display: flex;
+    align-items: center;
+    .placeholder {
+        font-weight: 600;
+        color: #33333333;
+    }
+}
+
+.filter__calendar {
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px 0px #3333331a;
+    border: none;
+    font-family: 'ProximaNova', Arial, Helvetica, sans-serif !important;
+
+    .react-calendar__month-view {
+        padding: 0px 18px;
+    }
+    .react-calendar__navigation {
+        padding: 27px 18px 0px 18px;
+        margin-bottom: 28px;
+    }
+    .react-calendar__navigation__prev2-button,
+    .react-calendar__navigation__next2-button {
+        display: none;
+    }
+
+    .react-calendar__navigation__prev-button,
+    .react-calendar__navigation__next-button,
+    .react-calendar__navigation__label {
+        background: white !important;
+        &:hover {
+            background: white !important;
+        }
+    }
+    // .react-calendar__navigation__prev-button {
+    //     order: 2;
+    // }
+
+    // .react-calendar__navigation__next-button {
+    //     order: 3;
+    // }
+    .react-calendar__navigation__label {
+        font-weight: 700;
+        font-size: 18px;
+        color: $mine_shaft;
+    }
+    .react-calendar__tile {
+        color: $dove_gray;
+        font-weight: 600;
+    }
+    .react-calendar__tile--active {
+        background-color: $primary;
+        color: $white;
+    }
+    .react-calendar__month-view__weekdays__weekday {
+        abbr {
+            font-weight: 600;
+            color: $dove_gray;
+            text-decoration: none;
+        }
+    }
+}
+
+.close_calendar_btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #1a62f2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

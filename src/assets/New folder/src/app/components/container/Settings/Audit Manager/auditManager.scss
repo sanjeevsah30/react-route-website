@@ -1,0 +1,46 @@
+@import '../../../../static/styles/dependency/variables';
+@import '../../../../static/styles/dependency/mixins';
+
+.audit__manager__container {
+    height: calc(100vh - 64px);
+
+    @include custmd {
+        height: calc(100vh - 40px);
+    }
+}
+
+.audit__input__bg {
+    background: #f7f9fc;
+}
+
+.danger__btn {
+    background: #e07e71;
+    color: $white;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.auditColorGrey {
+    color: #999999;
+}
+
+.ant-spin-nested-loading,
+.ant-spin-container {
+    height: 100%;
+}
+
+.ant-spin-nested-loading {
+    .ant-spin.ant-spin-spinning {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+
+.maxW300 {
+    max-width: 300px;
+}
+
+.audit_text_green {
+    color: #52c41a;
+}

@@ -1,0 +1,10 @@
+export { feedbackManagerTour } from "./feedbackManagerTour";
+export { integrationsTour } from "./integrationsTour";
+export { teamManagerTour } from "./teamManagerTour";
+export { userManagerTour } from "./userManagerTour";
+export { topicManagerTour } from "./topicManagerTour";
+export { myCallsTour } from "./myCallsTour";
+export { searchTour } from "./searchTour";
+export { statisticsTour } from "./statisticsTour";
+export { libraryTour } from "./libraryTour";
+export { auditManagerTour } from "./auditManagerTour";

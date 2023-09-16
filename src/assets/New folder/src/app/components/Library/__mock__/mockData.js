@@ -1,0 +1,192 @@
+export const LibCategories = [
+    {
+        id: 1,
+        total_meetings: 2,
+        owner: {
+            id: 1,
+            first_name: "Rahul",
+            email: "rahulsharma",
+            username: "rahulsharma@convin.ai",
+        },
+        shared_with: [
+            {
+                id: 10,
+                first_name: "Saleem",
+                email: "saleemsheikh@convin.ai",
+                username: "saleemshaikh",
+            },
+            {
+                id: 11,
+                first_name: "Alia",
+                email: "aliadixit@convin.ai",
+                username: "aliadixit",
+            },
+            {
+                id: 12,
+                first_name: "Sejal",
+                email: "sejalkumar@convin.ai",
+                username: "sejalkumar",
+            },
+            {
+                id: 13,
+                first_name: "Abhishek",
+                email: "abhishekdhar@convin.ai",
+                username: "abhishekdhar",
+            },
+            {
+                id: 14,
+                first_name: "John",
+                email: "john@convin.ai",
+                username: "john14",
+            },
+        ],
+        name: "Designing",
+        created: "2021-10-02T12:43:03.889475Z",
+        updated: "2021-10-03T12:43:03.910171Z",
+    },
+    {
+        id: 2,
+        total_meetings: 1,
+        owner: {
+            id: 2,
+            first_name: "James",
+            email: "jamescraig@convin.ai",
+            username: "jamescraig",
+        },
+        shared_with: [
+            {
+                id: 20,
+                first_name: "Daniel",
+                email: "danielbond@convin.ai",
+                username: "danielbond",
+            },
+            {
+                id: 21,
+                first_name: "Leo",
+                email: "leoroberto@convin.ai",
+                username: "leoroberto",
+            },
+            {
+                id: 22,
+                first_name: "Alexandra",
+                email: "alexandra@convin.ai",
+                username: "alexandrabotez",
+            },
+        ],
+        name: "General",
+        created: "2021-09-10T12:43:27.363193Z",
+        updated: "2021-09-11T12:43:27.363213Z",
+    },
+    {
+        id: 3,
+        total_meetings: 1,
+        owner: {
+            id: 3,
+            first_name: "Shivam",
+            email: "shivamsharma@convin.ai",
+            username: "shivamsharma",
+        },
+        shared_with: [
+            {
+                id: 30,
+                first_name: "Ashish",
+                email: "ashishdhawan@convin.ai",
+                username: "ashishdhawan",
+            },
+        ],
+        name: "Misc",
+        created: "2021-09-20T13:53:09.959640Z",
+        updated: "2021-09-21T13:53:09.959659Z",
+    },
+];
+
+export const LibMeetings = [
+    {
+        id: 40,
+        owner: {
+            id: 1,
+            first_name: "Rahul",
+            middle_name: "",
+            last_name: "Sharma",
+            email: "rahulsharma@convin.ai",
+            username: "rahulsharma",
+        },
+        shared_with: [
+            {
+                id: 10,
+                first_name: "Saleem",
+                email: "saleemsheikh@convin.ai",
+                username: "saleemshaikh",
+            },
+            {
+                id: 11,
+                first_name: "Alia",
+                email: "aliadixit@convin.ai",
+                username: "aliadixit",
+            },
+            {
+                id: 12,
+                first_name: "Sejal",
+                email: "sejalkumar@convin.ai",
+                username: "sejalkumar",
+            },
+            {
+                id: 13,
+                first_name: "Abhishek",
+                email: "abhishekdhar@convin.ai",
+                username: "abhishekdhar",
+            },
+            {
+                id: 14,
+                first_name: "John",
+                email: "john@convin.ai",
+                username: "john14",
+            },
+        ],
+        note: "The main topic today was to discuss a strategy for combining the design elements of it all; the rest of the panel, and area, into one simple design that is understandable",
+        start_time: "0.0000000000",
+        end_time: "105.8800000000",
+        created: "2021-10-02T12:43:03.889475Z",
+        updated: "2021-10-03T12:43:03.910171Z",
+        meeting: 228,
+        category: 1,
+    },
+    {
+        id: 41,
+        owner: {
+            id: 2,
+            first_name: "James",
+            middle_name: "",
+            last_name: "Craig",
+            email: "jamescraig@convin.ai",
+            username: "jamescraig",
+        },
+        shared_with: [
+            {
+                id: 20,
+                first_name: "Daniel",
+                email: "danielbond@convin.ai",
+                username: "danielbond",
+            },
+            {
+                id: 21,
+                first_name: "Leo",
+                email: "leoroberto@convin.ai",
+                username: "leoroberto",
+            },
+            {
+                id: 22,
+                first_name: "Alexandra",
+                email: "alexandra@convin.ai",
+                username: "alexandrabotez",
+            },
+        ],
+        note: "Make sure everything is in check and no extra details are needed until further notice",
+        start_time: "74.0000000000",
+        end_time: "105.0000000000",
+        created: "2021-09-10T12:43:27.363193Z",
+        updated: "2021-09-11T12:43:27.363213Z",
+        meeting: 230,
+        category: 2,
+    },
+];

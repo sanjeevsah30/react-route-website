@@ -1,0 +1,177 @@
+@import "../../../../static/styles/dependency/variables";
+@import "../../../../static/styles/dependency/mixins";
+
+.report_graph_modal {
+    .ant-modal-footer {
+        display: none;
+    }
+
+    .ant-modal-content {
+        max-height: 1000px !important;
+        overflow-y: scroll;
+    }
+}
+
+.report_table {
+    // margin-top: 36px;
+
+    table {
+        border: 1px solid #0000001a;
+
+        .ant-table-thead {
+            background: #d2d2d233;
+            border-bottom: 1px solid #0000001a !important;
+
+            .ant-table-cell {
+                font-weight: 600 !important;
+                font-size: 14px;
+            }
+        }
+
+        .ant-table-tbody {
+            tr {
+                td {
+                    padding: 5px !important;
+                }
+            }
+        }
+    }
+
+    .ant-pagination-prev {
+        button {
+            border: none !important;
+            width: 100px;
+            background: transparent !important;
+
+            &::after {
+                content: "Previous";
+            }
+        }
+    }
+
+    .ant-pagination-next {
+        button {
+            border: none !important;
+            width: 100px;
+            background: transparent !important;
+
+            &::before {
+                content: "Next";
+            }
+        }
+    }
+
+    .ant-pagination-item {
+        border: none !important;
+        color: #666666 !important;
+        background: transparent !important;
+
+        &.ant-pagination-item-active {
+            border: 1px solid $primary !important;
+            background: #1a62f21a !important;
+        }
+
+        a {
+            background: transparent !important;
+        }
+    }
+}
+
+.report_graph {
+    border: 1px solid #99999933;
+    box-shadow: 0px 5px 20px 0px #0000000d;
+    padding: 16px;
+    border-radius: 10px;
+    // width: 100%;
+}
+
+.parameter-report-container {
+    gap: 16px;
+    @include flex(flex, row, space-between, stretch);
+
+    .parameter-table {
+        .table-container {
+            border: 1px solid rgba(153, 153, 153, 0.2);
+            border-radius: 10px;
+            margin-top: 14px;
+            padding-bottom: 17px;
+
+            .sort_arraow_container {
+                display: inline;
+
+                margin-left: 6px;
+
+                .arrow {
+                    display: flex;
+                    cursor: pointer;
+
+                    svg {
+                        fill: $dove_gray;
+                        pointer-events: all;
+                    }
+                }
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #99999933;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 20px 34px;
+                color: $mine_shaft;
+                font-size: 16px;
+                font-weight: 600;
+
+                .head2 {
+                    padding: 0 0px 0 25px;
+                    border-left: 1px solid rgb(167, 167, 167);
+                    @include flex(flex, row, space-between, center);
+
+                    .btn-container {
+                        @include flex(flex, column, space-between, center);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .parameterBar-container {
+                .parameterBar {
+                    border-bottom: 1px solid rgb(214, 214, 214);
+                    padding: 24px 58px 24px 34px;
+
+                    .parameter {
+                        height: auto;
+                        line-height: 19px;
+                        font-weight: 600;
+                    }
+
+                    .bar {
+                        height: 6px;
+                        background: #99999933;
+
+                        border-radius: 5px;
+
+                        .bar-progress {
+                            background-color: #4e89ff;
+                            height: 6px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*.ant-table-container table > thead > tr:first-child th:first-child {
+    max-width: 2300;
+  
+}
+th.ant-table-cell.ant-table-cell-fix-left.ant-table-cell-fix-left-last{
+    max-width: 200px;
+}*/
+.ant-table-cell-fix-left {
+    max-width: 280px;
+}

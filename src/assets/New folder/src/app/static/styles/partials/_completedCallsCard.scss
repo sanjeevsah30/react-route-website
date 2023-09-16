@@ -1,0 +1,239 @@
+.call-card {
+    width: 100%;
+    letter-spacing: normal;
+
+    &-left {
+        padding: {
+            top: 0.5rem;
+            left: 1rem;
+            right: 0.5rem;
+            bottom: 0.5rem;
+        }
+
+        border-right: 1px solid $solitude;
+
+        &-top {
+            border-bottom: 1px solid $solitude;
+            margin-bottom: 0.75rem;
+            padding-bottom: 4px;
+            // padding-top: 0.75rem;
+
+            div.ant-typography {
+                margin-bottom: 0;
+            }
+
+            .date {
+                color: $echoblue;
+                font-size: 0.6875rem;
+            }
+
+            .comment_initials {
+                line-height: 2px;
+                span.ant-avatar.ant-avatar-circle {
+                    margin-right: -4px;
+                    .ant-avatar-string {
+                        font-size: 14px !important;
+                    }
+                }
+            }
+
+            .callname {
+                padding-right: 0.25rem;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                @include custmd {
+                    font-size: 12px;
+                }
+
+                span:first-of-type {
+                    max-width: 90%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+                span:last-of-type {
+                    button {
+                        margin: 0;
+                        line-height: 1;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            align-items: center;
+
+            .label {
+                font-size: 0.75rem;
+                color: $echoblue;
+                padding: 0;
+            }
+
+            .dropdown-list-toggler {
+                color: $labelgrey;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .edit-callname {
+        padding-right: 0.5rem;
+    }
+
+    .call-card-left {
+        @include md-down {
+            width: 100%;
+            max-width: 100%;
+            flex: 1;
+        }
+    }
+    .call_card_tags {
+        padding-right: 10px;
+        min-width: 200px;
+    }
+    .call_card_tags,
+    .call_card_type {
+        @include md-down {
+            display: none;
+        }
+    }
+
+    .call-card-talkratio,
+    .call-card-questions {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        // align-items: center;
+
+        @include md-down {
+            display: none;
+        }
+
+        .ant-statistic {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+
+        .ant-statistic-title {
+            font-size: 0.75rem;
+            color: $echoblue;
+        }
+
+        .ant-statistic-content {
+            &-value-decimal,
+            &-suffix,
+            &-value-int {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .call-card-talkratio {
+        padding: 1.25rem 0.5rem 0.5rem;
+        border-right: 1px solid $solitude;
+
+        .ant-statistic-title {
+            padding-left: 1rem;
+        }
+
+        .success .ant-statistic-content {
+            color: #3f8600;
+        }
+
+        .warn .ant-statistic-content {
+            color: #faad14;
+        }
+
+        .danger .ant-statistic-content {
+            color: #cf1322;
+        }
+    }
+
+    .call-card-questions {
+        padding: 1.25rem 0.5rem 0.5rem;
+
+        .ant-statistic-content {
+            padding-left: 1.5rem;
+        }
+    }
+
+    .completed-call-actions {
+        display: none !important;
+        align-items: center;
+        justify-content: flex-end;
+
+        .ant-btn-link {
+            font-size: 1.25rem;
+        }
+
+        .ant-btn-primary {
+            font-size: 0.75rem;
+        }
+    }
+    .completed-call-actions {
+        @include md-down {
+            max-width: 100%;
+            flex: 0.9;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.callsCard {
+    &.active,
+    &:hover {
+        .call-card .completed-call-actions {
+            display: flex !important;
+        }
+    }
+    &.fadedCall {
+        box-shadow: none;
+        border: 1px solid $solitude;
+        position: relative;
+    }
+
+    .processing_text {
+        font-size: 14px;
+        padding: 4px;
+        // border-bottom: 1px solid $belowLevel;
+        font-weight: 500;
+        color: $white;
+        margin: 0;
+        flex: 1;
+        border-radius: 4px 4px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include md-down {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+    }
+
+    &-agenda {
+        max-height: 44px;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        transition: all 0.5s ease;
+
+        &.show-more {
+            max-height: none;
+        }
+    }
+
+    &-btn .ant-btn {
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+    }
+}

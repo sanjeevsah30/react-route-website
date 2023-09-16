@@ -1,0 +1,171 @@
+.appHome {
+    @include scrollbar__style;
+    .app_sidebar_navigation {
+        @include hover;
+        z-index: 20;
+        @include md-down {
+            display: none;
+        }
+    }
+    &-right {
+        @include custlg {
+            flex: 1;
+        }
+    }
+    .app_sidebar_navigation {
+        max-width: 60px !important;
+        min-width: 60px !important;
+        flex: 0 0 60px !important;
+        box-shadow: none !important;
+        @include custlg {
+        }
+    }
+    .ant-menu-dark.ant-menu-vertical,
+    .ant-menu-light.ant-menu-vertical {
+        flex: 1;
+        margin-bottom: 100px;
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include custlg {
+            max-width: 60px;
+        }
+
+        .ant-menu-title-content span:not(.onboard__pendingSteps):not(.anticon) {
+            display: none;
+        }
+        .ant-menu-title-content {
+            opacity: 1 !important;
+            margin: 0;
+        }
+
+        .ant-menu-item {
+            padding: 0;
+            max-height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // border-bottom: 0.0625rem solid $textgrey;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            flex-shrink: 0;
+            flex-grow: 1;
+            color: #9b9b9b;
+            border: none;
+            &:focus {
+                // background-color: transparentize(
+                //     $color: $primary,
+                //     $amount: 0.5
+                // );
+                // color: #fff;
+                background-color: transparent;
+            }
+            .ant-menu-item-icon,
+            .ant-menu-title-content,
+            .ant-menu-title-content .anticon {
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+            }
+        }
+
+        // .logout-user {
+        //     margin-top: auto;
+        //     border-top: 0.0625rem solid $textgrey;
+        // }
+    }
+    .ant-menu-light.ant-menu-vertical {
+        .ant-menu-item-selected {
+            background-color: unset;
+            color: $white;
+            position: relative;
+
+            .active_menu {
+                background-color: $primary;
+                // padding: 6px 10px 0px;
+                border-radius: 12px;
+            }
+        }
+        .ant-menu-item-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            span.anticon {
+                line-height: 1 !important;
+            }
+        }
+    }
+    .app_sidebar_navigation {
+        .ant-layout-sider-children {
+            display: flex;
+            flex-flow: column;
+            border-right: 1px solid #99999933;
+            .anticon-logout {
+                color: $danger;
+            }
+        }
+    }
+
+    .persuasion__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        @include custlg {
+            font-size: 10px;
+        }
+    }
+    .onboard__pendingSteps {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        font-size: 12px;
+        line-height: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 0, 0, 0.65);
+        font-weight: 600;
+        color: rgba(255, 0, 0, 0.65);
+        @include custlg {
+            font-size: 12px;
+            width: 15px;
+            height: 15px;
+            top: 5px;
+            right: 8px;
+        }
+    }
+}
+
+.ant-tooltip-inner {
+    svg {
+        display: none !important;
+    }
+    .onboard__pendingSteps {
+        display: none;
+    }
+}
+
+.app-sidebar {
+    display: flex;
+    flex-flow: column;
+    border: none !important;
+}
+.ant-menu-inline-collapsed-tooltip .anticon {
+    display: none;
+}

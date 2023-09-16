@@ -1,0 +1,169 @@
+// Topic Side Pane
+.topicsidepane {
+    .nphrases {
+      display: none;
+    }
+  
+    &-container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: rgba(77, 88, 112, 0.3);
+      z-index: 14;
+    }
+  
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 40rem;
+    height: 100%;
+    z-index: 15;
+    background: $white;
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(77, 88, 112, 0.12);
+    display: flex;
+    flex-flow: column;
+  
+    &-top {
+      padding: 0rem 1rem;
+      flex: 0.75;
+      display: flex;
+      align-items: center;
+      border-bottom: 0.1rem solid $belowLevel;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      min-height: 4rem;
+    }
+  
+    &-mainsettings {
+      flex: 2;
+      display: flex;
+      border-bottom: 0.1rem solid $belowLevel;
+      align-items: center;
+  
+      .inputsection {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        padding-left: 1rem;
+        justify-content: flex-start;
+      }
+    }
+  
+    .input,
+    .select {
+      height: auto;
+      width: 100%;
+      font-size: 0.75rem;
+      padding: 0.75rem;
+    }
+  
+    .dropdown {
+      width: 100%;
+  
+      .select {
+        width: 70%;
+        background: $belowLevel;
+      }
+    }
+  
+    .label {
+      padding: 0.25rem 0;
+      margin-left: 1rem;
+      font-size: 0.75rem;
+    }
+  
+    &-contents {
+      display: flex;
+      flex-flow: column;
+      flex: 8;
+      @include overflow-auto;
+  
+      .details {
+        display: flex;
+        align-items: center;
+  
+        .label {
+          flex: 1;
+        }
+  
+        .inputcontainer {
+          flex: 1.5;
+          display: flex;
+          align-items: center;
+          padding-left: 1rem;
+          position: relative;
+  
+          .input {
+            width: 100%;
+          }
+  
+          .addbutton {
+            position: absolute;
+            right: 0.1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: 600;
+            text-align: center;
+            padding: 0.5rem 0.75rem;
+            color: $white;
+            background: $primary;
+  
+            .fa {
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+  
+      .editlabel {
+        color: $primary;
+        cursor: pointer;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        flex: 0.5;
+        padding-left: 0.5rem;
+        text-align: right;
+      }
+  
+      &-keywords,
+      &-phrases {
+        padding: 1rem;
+        flex: 1;
+        // border-bottom: 0.1rem solid $belowLevel;
+  
+        .label {
+          margin-left: 0;
+        }
+  
+        .keywordscontainer,
+        .phrasescontainer {
+          max-width: 75%;
+          padding-top: 0.75rem;
+  
+          .phrasetag {
+            max-width: 100%;
+            display: block;
+          }
+          .tag-label {
+            max-width: none;
+          }
+        }
+      }
+    }
+  
+    &-bottom {
+      padding: 0 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-flow: row;
+      justify-content: flex-end;
+      align-items: center;
+      border-top: 0.1rem solid $belowLevel;
+    }
+  }

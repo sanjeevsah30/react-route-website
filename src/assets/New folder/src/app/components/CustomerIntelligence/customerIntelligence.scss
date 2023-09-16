@@ -1,0 +1,124 @@
+@import '../../static/styles/dependency/variables';
+@import '../../static/styles/dependency/mixins';
+
+.add_tab_parent {
+    border-left: 1px solid #99999920;
+}
+.add_tab {
+    color: $primary;
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    background-color: transparentize($color: $primary, $amount: 0.8);
+    border-radius: 8px;
+    @include flex(flex, row, center, center);
+}
+
+.ci_dashboard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ant-spin-nested-loading {
+        height: auto;
+    }
+    .ci_header {
+        border-bottom: 1px solid #99999920;
+        padding: 0px 18px;
+        flex-shrink: 0;
+    }
+
+    .ci__switch {
+        border: 1px solid #9999990d;
+        border-radius: 8px;
+        background: linear-gradient(
+                0deg,
+                rgba(153, 153, 153, 0.1),
+                rgba(153, 153, 153, 0.1)
+            ),
+            linear-gradient(
+                0deg,
+                rgba(153, 153, 153, 0.05),
+                rgba(153, 153, 153, 0.05)
+            );
+
+        padding: 5px;
+
+        display: inline-flex;
+
+        .ci__switch--btn {
+            outline: none;
+            background: transparent;
+            border: none;
+
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+
+            padding: 0px 20px;
+
+            cursor: pointer;
+            height: 34px;
+
+            &.selected {
+                border: 1px solid $primary;
+                border-radius: 8px;
+                background: white;
+                color: $primary;
+            }
+        }
+    }
+
+    .ci_container {
+        padding: 18px;
+
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+
+        .ci_graph_table_container {
+            // border: 1px solid #99999933;
+            // box-shadow: 0px 4px 20px 0px #9999991a;
+            // border-radius: 8px;
+            // padding: 18px;
+        }
+
+        .graph_container {
+            border: 1px solid #99999933;
+            border-radius: 6px;
+            background-color: white;
+            margin: 20px 0px;
+            padding: 20px;
+        }
+
+        .ci_table {
+            border: 1px solid #99999933;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .ci_table_heading {
+            padding: 20px;
+            .ant-col {
+                color: #666;
+
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .ci_table_data {
+            padding: 20px;
+            border-top: 1px solid #99999933;
+            .ant-col {
+                color: #333;
+            }
+
+            &.loaders .ant-col {
+                padding: 0px 10px;
+            }
+        }
+    }
+}

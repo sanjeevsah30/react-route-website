@@ -1,0 +1,210 @@
+@import '../../static/styles/dependency/variables';
+@import '../../static/styles/dependency/mixins';
+
+.inviteUserModal {
+    .ant-form {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+}
+
+.createUserModal {
+    .ant-modal-content {
+        border-radius: 6px;
+    }
+
+    .ant-modal-header {
+        padding: 22px 24px;
+        border-bottom: 1px solid $solitude;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .ant-modal-title {
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $mine_shaft;
+    }
+
+    .ant-form:not(:first-child) {
+        label {
+            display: none !important;
+        }
+    }
+
+    .ant-form {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        row-gap: 26px;
+
+        .ant-form-item {
+            margin-bottom: 0;
+
+            .ant-select-selector {
+                padding: 10px 14px;
+                height: 42px;
+                border-radius: 5px;
+                border: 1px solid $solitude;
+            }
+
+            .ant-select-single.ant-select-show-arrow
+                .ant-select-selection-placeholder {
+                text-transform: initial;
+                color: $dusty_gray;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 20px;
+            }
+
+            .ant-select-selection-item {
+                line-height: 21px;
+                text-transform: capitalize;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .ant-select-single:not(.ant-select-customize-input)
+                .ant-select-selector
+                .ant-select-selection-search-input {
+                height: 42px;
+            }
+        }
+    }
+
+    .ant-btn {
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: initial;
+    }
+
+    .ant-input-affix-wrapper {
+        height: 42px;
+        border: 1px solid $solitude;
+        border-radius: 5px;
+
+        .ant-input::placeholder {
+            color: $dusty_gray;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        border: 1px solid $solitude;
+        border-radius: 5px;
+    }
+
+    .ant-modal-body {
+        padding: 18px 24px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+
+        &::before {
+            font-family: inherit !important;
+            font-size: inherit !important;
+            margin-left: 4px;
+        }
+    }
+
+    .ant-modal-footer {
+        border: 0;
+        padding: 0 24px 26px 24px;
+    }
+}
+
+.user_manager_drop {
+    .ant-select-item-option-content {
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        background: #dfeaff66;
+    }
+}
+
+.trial_banner {
+    padding: 14px;
+    border-radius: 4px;
+    margin-bottom: 28px;
+    background: linear-gradient(92.21deg, #009bfd 0%, #f93f78 99.48%);
+    color: $white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.expired {
+        background: linear-gradient(92.21deg, #fd586b 0%, #f93f78 99.48%);
+    }
+
+    &.downgrade_banner {
+        margin-bottom: 22px !important;
+        justify-content: flex-start;
+    }
+
+    a {
+        color: $white !important;
+        font-weight: 600;
+        text-decoration: underline !important;
+    }
+}
+
+.android_info_btn {
+    background-color: transparentize($color: $dove_gray, $amount: 0.9);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+}
+
+.para {
+    color: #666;
+    font-weight: 14px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+.csvInput {
+    display: none;
+}
+
+.csv-uplaod {
+    height: 40px;
+    padding: 4px 15px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #1a62f2;
+    cursor: pointer;
+}
+
+.sampling_rule_more_options_popover {
+    .ant-popover-content {
+        width: 9rem;
+    }
+}
+
+.resetPasswordModal {
+    .ant-modal-footer {
+        padding: 0px;
+    }
+    .ant-input {
+        background: initial;
+    }
+}

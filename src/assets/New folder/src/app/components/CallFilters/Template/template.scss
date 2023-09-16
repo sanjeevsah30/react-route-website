@@ -1,0 +1,41 @@
+@import '../../../static/styles/dependency/variables';
+
+.template_container {
+    height: 100%;
+
+    .template_details_container {
+        padding: 1.4rem 2.1rem 0 2.1rem;
+        .heading_1 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .criteria_container {
+        max-height: calc(100vh - 344px);
+        padding: 0.5rem;
+    }
+
+    .teams_container {
+        padding: 161px 46px 0px 40px;
+        width: 422px;
+    }
+
+    .create_btn_container {
+        height: 69px;
+        padding: 0.875rem;
+        background: #f8f8f8;
+
+        button {
+            margin-right: 23px;
+            height: 40px;
+        }
+    }
+}
+
+.criteria_card {
+    background: $offwhite;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px 0px #0000001a;
+    padding-bottom: 1rem;
+}

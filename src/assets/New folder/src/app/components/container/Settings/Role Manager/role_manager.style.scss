@@ -1,0 +1,115 @@
+.role__manager {
+    padding: 40px 10px 0px;
+
+    .ant-collapse-header-text {
+        width: 100%;
+    }
+    &--card {
+        border: 1px solid #99999933;
+        box-shadow: 0px 4px 20px 0px #3333331a;
+        padding: 20px;
+        border-radius: 12px;
+        min-height: 214px;
+        .mid--section {
+            .permision {
+                padding-right: 14px;
+                border-right: 1px solid #99999933;
+            }
+
+            .total_users {
+                padding-left: 14px;
+            }
+        }
+
+        .bottom--section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #3333331a;
+            padding-top: 14px;
+
+            .ant-avatar-string {
+                transform: translateX(-50%) scale(0.8) !important;
+            }
+        }
+
+        .description {
+            background: #9999991a;
+            border-radius: 6px;
+            color: #999999;
+            padding: 6px;
+            margin: 9px 0 16px 0px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .role_edit_page {
+        .ant-checkbox-wrapper {
+            width: 200px !important;
+        }
+        .role__team__selector {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid #99999933;
+        }
+        .role_form {
+            display: flex;
+            width: 100%;
+            gap: 86px;
+
+            label {
+                font-size: 16px;
+                font-weight: 600;
+                &::before {
+                    content: '';
+                }
+            }
+            .ant-form-item {
+                flex: 1;
+                margin-bottom: 0;
+            }
+
+            .ant-input-affix-wrapper {
+                background: #9999991a;
+                border-radius: 6px;
+            }
+
+            .ant-input {
+                height: 46px;
+                border-radius: 6px !important;
+                background: transparent;
+            }
+        }
+    }
+    .role_collapse_card {
+        border: 1px solid #99999933;
+        box-shadow: 0px 4px 10px 0px #3333331a;
+        border-radius: 6px;
+        margin-bottom: 14px;
+        
+        .ant-collapse-header {
+            padding: 20px !important;
+        }
+
+        .ant-collapse-no-arrow {
+            .ant-collapse-content {
+                display: none;
+            }
+        }
+
+        .content__settings {
+            border-top: 1px solid #99999933;
+            padding-top: 22px;
+        }
+
+        .ant-radio-wrapper {
+            margin-right: 20px;
+        }
+
+        .ant-checkbox-wrapper {
+            margin-right: 92px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../../static/styles/dependency/variables';
+
+.bottomDrawer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    background-color: $white;
+
+    .btnContainer {
+        width: 28px;
+        height: 24px;
+        border-top-left-radius: 80%;
+        border-top-right-radius: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px -2px 5px -2px rgba(0, 0, 0, 0.3);
+        margin: {
+            top: -18px;
+            left: auto;
+            right: auto;
+        }
+        padding-left: 25px;
+        padding-right: 25px;
+        .anticon {
+            color: $primary;
+            margin: 0;
+            font-weight: 900;
+        }
+        position: relative;
+        z-index: 1;
+        background-color: $white;
+    }
+}
+.bottom_navigation {
+    margin-top: 12px;
+    flex-wrap: wrap;
+
+    &--tile {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        color: $darkergrey;
+
+
+        .anticon {
+            font-size: 20px;
+        }
+        &.logout-user {
+            color: $danger;
+        }
+        &.active {
+            border-bottom: 5px solid;
+            color: $primary;
+        }
+    }
+}

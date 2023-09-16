@@ -1,0 +1,334 @@
+.user-settings {
+    margin: 0;
+    padding: 0;
+
+    &-details {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        &-img-section {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            font-size: 5rem;
+        }
+    }
+
+    &-topsection {
+        display: flex;
+        padding: 12px 0;
+        align-items: center;
+        width: 100%;
+
+        .name {
+            flex: 1;
+            padding: 2rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+
+        .button {
+            flex: 1;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 2rem;
+
+            .cta {
+                padding: 1rem 2rem;
+                height: auto;
+                width: 12.9812rem;
+
+                span {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+
+    &-searchsection {
+        display: flex;
+        width: 100%;
+
+        .searchbar {
+            flex: 1;
+            padding: 1rem 2rem;
+
+            &-input {
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        .options {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-align: left;
+
+            .fa {
+                margin-left: 1.5rem;
+            }
+
+            &-counters {
+                color: $labelgrey;
+            }
+        }
+    }
+
+    &-name-section {
+        display: flex;
+        flex: 4.3;
+        padding: 2.5rem 0;
+        flex-flow: column;
+        align-items: center;
+
+        &-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0;
+            text-transform: capitalize;
+            padding-left: 1rem;
+        }
+
+        &-role {
+            width: 100%;
+            padding: 0.5rem 0;
+
+            &-input {
+                width: 22.325rem;
+                margin-top: 0;
+                padding: 1rem;
+                height: 2.5rem;
+                font-size: 1rem;
+                border-radius: 3.375rem;
+                border: solid 0.125rem $belowLevel;
+
+                &::placeholder {
+                    font-size: 1rem;
+                    color: $echoblue;
+                }
+            }
+        }
+    }
+
+    &-container {
+        margin-top: 1.6187rem;
+        margin: 2.5rem 1.25rem;
+        height: auto;
+        padding: 0 0 1rem 0;
+        max-width: 70rem;
+        background-color: $white;
+
+        form {
+            width: 100%;
+        }
+    }
+
+    &-label {
+        font-size: 0.75rem;
+        padding: 1.5rem 0 0.5rem 3.75rem;
+    }
+
+    // Disabled input need not have a specified color.
+
+    .input:disabled {
+        background: $belowLevel;
+    }
+
+    // User-Manager and Topic Manager Tabs. Both share the same design.
+    .usercreator {
+        .roleinput {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .usertable,
+    .topicstable {
+        font-size: 0.8rem;
+        width: 100%;
+
+        .nphrases {
+            display: none;
+        }
+
+        &-row {
+            display: flex;
+            padding: 0;
+            color: $textgrey;
+            font-weight: 500;
+
+            &:nth-child(even) {
+                background: $surface;
+            }
+
+            &-field {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 12.5%;
+                padding: 0.5rem 0.5rem 0.75rem;
+
+                &.heading {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                &.datejoined,
+                &.topicname {
+                    flex: 1.5;
+                }
+
+                &.role {
+                    flex: 1.25;
+                    padding-left: 0;
+
+                    .dropdown {
+                        width: 100%;
+                        padding-left: 1rem;
+                    }
+
+                    .roleselect {
+                        padding: 0.6rem 0.35rem;
+                        border-radius: 0.5rem;
+                        font-size: 0.75rem;
+                        margin: 0;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        background: $bordergrey;
+                        border: none;
+                    }
+                }
+
+                &.userid {
+                    flex: 1;
+                    max-width: 7%;
+                    min-width: 7%;
+                }
+
+                &.fullname {
+                    flex: 1.5;
+                }
+
+                &.email {
+                    flex: 2.5;
+                    min-width: 16%;
+                }
+
+                &.actions {
+                    flex: 2;
+                }
+
+                &.keywords {
+                    flex: 4;
+                }
+
+                &-edituser,
+                &-edittopic {
+                    color: $primary;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+
+                &-removeuser,
+                &-removetopic {
+                    color: $danger;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+
+                &-removetopic {
+                    margin-left: 1rem;
+                }
+
+                .keyword {
+                    background: $echoblue;
+
+                    .tag-label {
+                        color: $textgrey;
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .no-users,
+    .no-topics {
+        width: 100%;
+        text-align: center;
+        color: $textgrey;
+
+        &-icon {
+            font-size: 4rem;
+        }
+    }
+}
+
+.tealcircle,
+.primarycircle {
+    .ant-badge-count {
+        color: $white;
+        background: $extrateal;
+        font-size: 1rem;
+    }
+}
+
+.primarycircle .ant-badge-count {
+    background: $primary;
+}
+
+// Subnav Styles
+.settings {
+    &-container .view-container {
+        flex-flow: row;
+
+        .ant-menu-item {
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        // .site-settings {
+        //   box-shadow: 0.0625rem 0rem 0.625rem 0.0625rem rgba($color: $black, $alpha: 0.5);
+        // }
+    }
+
+    &-subnav {
+        &-option-label {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.profile .ant-card {
+    padding: 0.5rem;
+    @include hover;
+
+    &.changePassword {
+        margin-top: 1rem;
+    }
+
+    &:not(.changePassword) .ant-btn {
+        margin: 0;
+    }
+}
+
+.userMgr {
+    max-width: 100%;
+
+    @include hover;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+.newpassword {
+    &.ant-card {
+        height: fit-content !important;
+    }
+}

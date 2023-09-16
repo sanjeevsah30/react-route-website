@@ -1,0 +1,394 @@
+.stats-interactions-container {
+    display: flex;
+    flex-flow: column;
+    max-height: 90vh;
+    @include overflow-auto;
+    border-top: 0.0825rem solid $belowLevel;
+
+    .interactions-cards {
+        padding-bottom: 1.5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ant-checkbox-inner {
+        border-color: $primary;
+        border-width: 0.125rem;
+    }
+}
+
+.stats-bottom-section {
+    flex: 1;
+    @include overflow-auto;
+    margin: 0 2rem;
+    padding-bottom: 12.5rem;
+
+    .rep-name {
+        text-transform: capitalize;
+
+        .ant-checkbox-wrapper {
+            display: flex;
+            align-items: center;
+
+            & > span:not(.ant-checkbox) {
+                display: flex;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    .talkRatio {
+        &.success {
+            color: #3f8600;
+        }
+
+        &.warn {
+            color: #faad14;
+        }
+
+        &.danger {
+            color: #cf1322;
+        }
+    }
+
+    .rep-info {
+        padding: 1rem 0.5rem;
+        margin: 0 0.5rem;
+
+        &:first-of-type {
+            margin-top: 0.5rem;
+        }
+
+        &:hover {
+            @include hover;
+        }
+    }
+
+    .unit {
+        // color: $labelgrey;
+        text-transform: uppercase;
+        padding-left: 0.25rem;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    .rep-calls {
+        border-bottom: 1px solid $lightgrey;
+        position: relative;
+
+        &-points {
+            position: absolute;
+            border-radius: 50%;
+            width: 0.65rem;
+            height: 0.65rem;
+            background-color: $primary;
+            opacity: 0.75;
+            // border: 4px solid $silvertree;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            z-index: 4;
+        }
+
+        .team-avg {
+            position: absolute;
+            border-right: 0.1875rem dashed #2336ef;
+            height: 3.5875rem;
+            top: -1.625rem;
+            cursor: pointer;
+            // opacity: 0.5;
+            z-index: 2;
+        }
+    }
+
+    .repStats .graph-trigger {
+        cursor: pointer;
+    }
+
+    .ideal-range {
+        z-index: 1;
+        background-color: transparentize($color: $primary, $amount: 0.85);
+        position: absolute;
+        top: -1.45rem;
+        height: 3.4rem;
+        border: 1px solid;
+        border-top: 0;
+        border-bottom: 0;
+        box-sizing: content-box;
+    }
+}
+
+.repGraph {
+    width: 31.25rem;
+    height: 350px;
+
+    &.plot-line {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.stats-scale {
+    margin : {
+        top: 1rem;
+        left: 3rem;
+        right: 3rem;
+    }
+
+    text-transform: uppercase;
+    color: $labelgrey;
+}
+
+.stats-scale,
+.stats-bottom-section {
+    .repStats {
+        text-align: center;
+    }
+}
+
+.grid {
+    &-ticks {
+        position: relative;
+        margin: 0;
+        border-bottom: 1px solid;
+        transform: translate(0px, 0.625rem);
+
+        &-bar {
+            position: absolute;
+            bottom: -0.75rem;
+            color: $labelgrey;
+        }
+
+        &-mark {
+            position: absolute;
+            bottom: 3px;
+            font-size: 12px;
+            letter-spacing: normal;
+            transform: translate(-5px, 0px);
+        }
+    }
+}
+
+.callhover {
+    font-size: 0.75rem;
+    display: flex;
+    flex-flow: column;
+
+    .details {
+        span {
+            &:first-of-type {
+                padding-right: 0.25rem;
+            }
+        }
+    }
+
+    a {
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .ant-btn {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+}
+
+.comparer {
+    &-modal {
+        width: 65rem;
+        max-width: 95%;
+    }
+
+    .header {
+        span {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: normal;
+        }
+
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        margin-top: 12px;
+    }
+
+    [class^='col-'] {
+        border-right: 1px solid $labelgrey;
+        padding: 0 0.5rem;
+        text-align: center;
+
+        &:first-of-type {
+            // border-left: 1px solid $labelgrey;
+            text-align: left;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+
+        > span {
+            // color: $labelgrey;
+            vertical-align: sub;
+        }
+    }
+
+    .details {
+        [class^='col-'] {
+            padding: 1rem 0.5rem;
+
+            // text-align: center;
+            &:not(:first-of-type) {
+                > span {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.comparison-container {
+    &:hover {
+        @include hover;
+    }
+
+    .bar-container {
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        padding: 1rem;
+
+        .bar {
+            font-weight: 500;
+            width: 50%;
+            // position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                height: 5.5rem;
+                top: 0.6rem;
+            }
+
+            &.left {
+                align-self: flex-start;
+                text-align: right;
+
+                // border-top-left-radius: 15px;
+                // border-bottom-left-radius: 15px;
+                &::after {
+                    content: '';
+                    border-right: 3px dashed $labelgrey;
+                }
+
+                .value {
+                    left: 25%;
+                }
+            }
+
+            &.equal {
+                background: transparent;
+
+                &::after {
+                    content: '';
+                    border-right: 3px dashed $labelgrey;
+                }
+            }
+
+            &.right {
+                align-self: flex-end;
+                text-align: left;
+
+                // border-top-right-radius: 15px;
+                // border-bottom-right-radius: 15px;
+                &::after {
+                    content: '';
+                    border-left: 3px dashed $labelgrey;
+                }
+
+                .value {
+                    right: 25%;
+                }
+            }
+
+            .bar-line {
+                background: transparentize($color: $legendpurple, $amount: 0.5);
+                height: 2rem;
+                text-align: center;
+                display: inline-block;
+            }
+
+            .value {
+                position: absolute;
+                top: 1.25rem;
+            }
+        }
+    }
+
+    &.data-na {
+        .bar-container {
+            color: $white;
+        }
+    }
+}
+
+.legend-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .legend-container {
+        max-width: 30rem;
+    }
+
+    .interaction-legend {
+        .legend {
+            &-label {
+                text-transform: uppercase;
+                letter-spacing: normal;
+                font-size: 0.875rem;
+                padding-left: 0.5rem;
+                font-weight: 500;
+            }
+
+            &-detail {
+                border: 1px solid;
+                padding: 0.5rem;
+            }
+        }
+
+        .call-dot {
+            border-radius: 50%;
+            width: 0.65rem;
+            height: 0.65rem;
+            background-color: $primary;
+            opacity: 0.75;
+            display: inline-block;
+        }
+
+        .team-avg {
+            display: inline-block;
+            border: 2px dashed #2336ef;
+            height: 100%;
+        }
+
+        .ideal-range {
+            height: 100%;
+            display: block;
+            background-color: transparentize($color: $primary, $amount: 0.85);
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+    }
+
+    .stats-activity-help-text {
+        margin: 0;
+    }
+}
